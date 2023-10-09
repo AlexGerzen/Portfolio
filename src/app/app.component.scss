@@ -1,0 +1,19 @@
+.scroll-down-container {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 100px;
+    right: 100px;
+    gap: 45px;
+
+    span {
+        transform: rotate(-90deg);
+    }
+
+    img {
+        width: 16px;
+    }
+    
+}
