@@ -8,13 +8,15 @@ import { FrontPageComponent } from './front-page/front-page.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { LinksComponent } from './links/links.component';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FrontPageComponent,
-    LinksComponent
+    LinksComponent,
+    AboutMeComponent
   ],
   imports: [
     BrowserModule,
