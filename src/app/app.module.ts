@@ -9,6 +9,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { LinksComponent } from './links/links.component';
 import { AboutMeComponent } from './about-me/about-me.component';
+import { MySkillsComponent } from './my-skills/my-skills.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { AboutMeComponent } from './about-me/about-me.component';
     HeaderComponent,
     FrontPageComponent,
     LinksComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    MySkillsComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
