@@ -1,0 +1,51 @@
+.top-border {
+    border-top: 2px solid #70E61C;
+    width: 100%;
+}
+
+.footer-container {
+    width: calc(100% - 400px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 200px;
+    margin-left: 200px;
+    height: 400px;
+    color: white;
+}
+
+.alex {
+    font-size: 48px;
+    cursor: pointer;
+}
+
+.impressum {
+    font-size: 14px;
+    padding-top: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #1e283d;
+
+    &:hover {
+        border-bottom: 1px solid #1cdae6;
+    }
+}
+
+.copyright {
+    font-size: 30px;
+    cursor: default;
+}
+
+.links {
+    display: flex;
+    justify-content: end;
+    gap: 30px;
+
+    img {
+        transition: transform ease 0.3s;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.2);
+        }
+    }
+}
