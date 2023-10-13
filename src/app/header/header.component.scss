@@ -14,6 +14,11 @@
     z-index: 100;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
 .name-container {
     margin-left: 200px;
     font-weight: 700;
@@ -32,9 +37,15 @@
         &:hover {
             cursor: pointer;
             color: #70E61C;
-            ;
+            
         }
     }
 
     
+}
+
+.activate {
+    color: #70E61C !important;
+    text-decoration: underline 2px solid #9747FF !important;
+    text-underline-offset: 8px;
 }

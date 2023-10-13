@@ -7,6 +7,8 @@
     padding-top: 150px;
     padding-bottom: 150px;
     cursor: default;
+    position: relative;
+    max-width: 100%;
 }
 
 .head {
@@ -114,4 +116,23 @@
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.scroll-up {
+    position: absolute;
+    right: 200px;
+    bottom: 100px;
+    cursor: pointer;
+
+    &:hover {
+        filter: brightness(0) saturate(100%) invert(78%) sepia(19%) saturate(1859%) hue-rotate(44deg) brightness(99%) contrast(93%);
+    }
+}
+
+.purple-shadow {
+    position: absolute;
+    height: 500px;
+    bottom: -151px;
+    left: -108px;
+    z-index: 0;
 }

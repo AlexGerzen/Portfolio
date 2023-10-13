@@ -1,6 +1,19 @@
+.all {
+    position: relative;
+    z-index: 5;
+    background-color: #1e283d;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
 .top-border {
     border-top: 2px solid #70E61C;
     width: 100%;
+    z-index: 5;
+    position: relative;
 }
 
 .footer-container {
@@ -12,6 +25,9 @@
     margin-left: 200px;
     height: 400px;
     color: white;
+    z-index: 5;
+    position: relative;
+    background-color: #1e283d;
 }
 
 .alex {
@@ -23,10 +39,9 @@
     font-size: 14px;
     padding-top: 20px;
     cursor: pointer;
-    border-bottom: 1px solid #1e283d;
 
     &:hover {
-        border-bottom: 1px solid #1cdae6;
+        text-decoration: underline 1px solid #1cdae6;
     }
 }
 
@@ -37,7 +52,7 @@
 
 .links {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     gap: 30px;
 
     img {

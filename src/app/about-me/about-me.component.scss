@@ -12,6 +12,8 @@
     padding-bottom: 100px;
     gap: 50px;
     cursor: default;
+    position: relative;
+    max-width: 100%;
 }
 
 .left-container {
@@ -40,6 +42,11 @@
         width: 40px;
         height: 40px;
         margin-left: 20px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.2);
+        }
     }
 }
 
@@ -64,6 +71,6 @@
 .purple-shadow {
     position: absolute;
     z-index: 1;
-    right: -30%;
-    top: 70%;
+    right: -350px;
+    top: 0;
 }

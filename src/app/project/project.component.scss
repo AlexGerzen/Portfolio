@@ -1,3 +1,8 @@
+.all {
+    position: relative;
+    max-width: 100%;
+}
+
 .project-container {
     padding-top: 150px;
     margin-left: 200px;
@@ -7,6 +12,8 @@
     justify-content: center;
     align-items: center;
     cursor: default;
+    position: relative;
+    z-index: 5;
 }
 
 .other-direction {
@@ -73,4 +80,21 @@
     &:hover {
         background-color: #70E61C !important;
     }
+}
+
+.purple-shadow {
+    position: absolute;
+    height: 600px;
+    transform: scaleX(-1);
+    top: 120px;
+    left: 6%;
+    z-index: 1;
+}
+
+.green-shadow {
+    position: absolute;
+    transform: rotate(60deg);
+    height: 500px;
+    bottom: 0;
+    right: -225px;
 }
