@@ -9,13 +9,16 @@
             <div>Contact me through this form, I am interested in hearing you, konwing your ideas and contributing to your projects with my work.</div>
             <div class="contact-me">Need a Frontend developer? <p>Contact me!</p></div>
         </div>
-        <form class="right-container" action="" method="post">
-            <input id="yourName" placeholder="Your name" type="text">
-            <input id="yourEmail" placeholder="Your email" type="text">
-            <!-- <input class="message" placeholder="Your message" type="text"> -->
-            <textarea id="yourMessage" placeholder="Your message" cols="30" rows="10"></textarea>
-            <div class="checkbox-container"><mat-checkbox color="primary"></mat-checkbox>I´ve read the privacy policy and agree to the processing of my data as outlined.</div>
-            <button disabled mat-raised-button>Send message :)</button>
+        <form (ngSubmit)="sendEmail(myForm)" #myForm="ngForm" class="right-container" action="" method="post">
+            <input [class.border-red]="inputName.empty" id="yourName" [(ngModel)]="inputName.value" required name="nameInput" placeholder="Your name" type="text">
+            <div [class.color-red]="inputName.empty" id="nameRequired">Your name is required</div>
+            <input [class.border-red]="inputEmail.empty" required email="true" type="email" [(ngModel)]="inputEmail.value" name="emailInput" placeholder="Your email">
+            <div [class.color-red]="inputEmail.empty" id="emailRequired">Your email is required</div>
+            <textarea [class.border-red]="inputMessage.empty" id="yourMessage" [(ngModel)]="inputMessage.value" required name="messageInput" placeholder="Your message" cols="30" rows="10"></textarea>
+            <div [class.color-red]="inputMessage.empty" id="messageEmpty">Your message is empty</div>
+            <div class="checkbox-container"><mat-checkbox (click)="setPolicy()" color="primary"></mat-checkbox>I´ve read the privacy policy and agree to the processing of my data as outlined.</div>
+            <div id="acceptPolicy">Please accept the privacy policy</div>
+            <button value="Submit" type="submit"  mat-raised-button>Send message :)</button>
         </form>
     </div>
     <a href="#frontPageContainer"><img class="scroll-up" src="./assets/img/go-up-button.png" alt=""></a>

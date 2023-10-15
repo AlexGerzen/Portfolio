@@ -67,7 +67,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 10px;
     width: 55%;
     margin-left: 150px;
 
@@ -92,8 +92,9 @@
 
         }
 
-        &:focus {
-            outline: #70E61C !important;
+        &:focus-visible {
+            outline: none !important;
+            border-color: #70E61C;
         }
     }
 
@@ -135,4 +136,17 @@
     bottom: -151px;
     left: -108px;
     z-index: 0;
+}
+
+.color-red {
+    color: red !important;
+}
+
+.border-red {
+    border-color: red !important;
+}
+
+#messageEmpty, #emailRequired, #nameRequired, #acceptPolicy {
+    color: #1e283d;
+    width: 100%;
 }

@@ -15,6 +15,7 @@ import { ProjectComponent } from './project/project.component';
 import { ContactComponent } from './contact/contact.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FooterComponent } from './footer/footer.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,9 @@ import { FooterComponent } from './footer/footer.component';
     AppRoutingModule,
     NoopAnimationsModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
