@@ -91,3 +91,40 @@
     width: 400px;
     text-align: end;
 }
+
+@media (max-width: 1340px) {
+    .front-page-container {
+        clip-path: ellipse(74% 56% at 34% 37%);
+    }
+
+    .profile-picture {
+        margin-left: 10px;
+    }
+
+    .profile-picture-container {    
+        img {
+            width: 500px;
+        }
+    }
+
+    .headline-button-container {
+        margin-right: 75px;
+    }
+
+    .alexander-gerzen {
+        font-size: 36px;
+        width: auto;
+    }
+
+    .frontend-developer {
+        font-size: 27px;
+        width: auto;
+        padding-top: 15px;
+    }
+
+    .i-am {
+        font-size: 30px;
+        padding-top: 28px;
+    }
+
+}

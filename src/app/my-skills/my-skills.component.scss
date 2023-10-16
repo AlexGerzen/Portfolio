@@ -98,3 +98,40 @@
     top: 210px;
     transform: rotate(90deg);
 }
+
+@media (max-width:1340px) {
+    .my-skills-container {
+        margin-left: 75px;
+        width: calc(100% - 75px);
+    }
+
+    .left-container {
+        div {
+            margin-right: 100px;
+            width: calc(25% - 100px);
+        }
+    }
+
+    .right-container {
+        div {
+            gap: 25px;
+        }
+
+        span {
+            font-size: 46px;
+        }
+
+        button {
+            margin-right: 100px;
+        }
+
+    }
+
+    .purple-line {
+        width: 50px;
+    }
+
+    .my-skills-text {
+        margin-right: 75px;
+    }
+}

@@ -71,6 +71,20 @@
 .purple-shadow {
     position: absolute;
     z-index: 1;
-    right: -350px;
+    right: 0px;
     top: 0;
+}
+
+@media (max-width:1340px) {
+    .about-me-container {
+        margin-left: 75px;
+        width: calc(100% - 75px);
+    }
+
+    .right-container {
+        
+        img {
+            z-index: 5;
+        }
+    }
 }

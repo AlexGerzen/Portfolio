@@ -26,6 +26,11 @@
     justify-content: end !important;
 }
 
+.margin-r-40 {
+    margin-right: 40px !important;
+    margin-left: 0 !important;
+}
+
 .left-container {
     width: 50%;
     display: flex;
@@ -52,6 +57,7 @@
         font-weight: 700;
     }
 }
+
 
 .skills {
     font-size: 24px;
@@ -94,8 +100,13 @@
 
 .green-shadow {
     position: absolute;
-    transform: rotate(60deg);
     height: 500px;
     bottom: 0;
-    right: -225px;
+    right: -0px;
+}
+
+@media (max-width:1340px) {
+    .skills {
+        line-height: 25px;
+    }
 }
