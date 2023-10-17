@@ -64,3 +64,12 @@ a {
         }
     }
 }
+
+@media (max-width:1340px) {
+    .footer-container {
+        margin-left: 75px;
+        margin-right: 75px;
+        width: calc(100% - 150px);
+    }
+
+}
