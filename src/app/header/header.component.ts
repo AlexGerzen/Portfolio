@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, Output, EventEmitter ,Input } from '@angular/core';
 
 
 @Component({
@@ -15,6 +15,14 @@ export class HeaderComponent implements AfterViewInit {
   aboutMeContainer: any;
   mySkillsContainer: any;
 
+  public menuSwitched : boolean = false;
+  @Output() dataEvent = new EventEmitter<boolean>();
+  @Input() set dataFromApp(data: boolean) {
+    if(data) {
+      this.switchMenu();
+    } 
+  }
+
   constructor() {
   }
 
@@ -30,43 +38,52 @@ export class HeaderComponent implements AfterViewInit {
     window.addEventListener("scroll", () => this.addClass());
   }
 
-addClass = () => {
-  let portfolioTop = this.portfolioContainer.getBoundingClientRect().top;
-  let aboutMeTop = this.aboutMeContainer.getBoundingClientRect().top;
-  let skillsTop = this.mySkillsContainer.getBoundingClientRect().top;
+  addClass = () => {
+    let portfolioTop = this.portfolioContainer.getBoundingClientRect().top;
+    let aboutMeTop = this.aboutMeContainer.getBoundingClientRect().top;
+    let skillsTop = this.mySkillsContainer.getBoundingClientRect().top;
 
-  if (portfolioTop <= 100) {
-    this.activatePortfolio();
-  } else if (skillsTop <= 100) {
-    this.activateSkills();
-  } else if (aboutMeTop <= 100) {
-    this.activateAboutMe();
-  } else {
-    this.deactivate();
+    if (portfolioTop <= 100) {
+      this.activatePortfolio();
+    } else if (skillsTop <= 100) {
+      this.activateSkills();
+    } else if (aboutMeTop <= 100) {
+      this.activateAboutMe();
+    } else {
+      this.deactivate();
+    }
   }
-}
 
-activatePortfolio = () => {
-  this.portfolioHead.classList.add('activate');
-  this.skillsHead.classList.remove('activate');
-  this.aboutMeHead.classList.remove('activate');
-}
+  activatePortfolio = () => {
+    this.portfolioHead.classList.add('activate');
+    this.skillsHead.classList.remove('activate');
+    this.aboutMeHead.classList.remove('activate');
+  }
 
-activateSkills = () => {
-  this.skillsHead.classList.add('activate');
-  this.aboutMeHead.classList.remove('activate');
-  this.portfolioHead.classList.remove('activate');
-}
+  activateSkills = () => {
+    this.skillsHead.classList.add('activate');
+    this.aboutMeHead.classList.remove('activate');
+    this.portfolioHead.classList.remove('activate');
+  }
 
-activateAboutMe = () => {
-  this.aboutMeHead.classList.add('activate');
-  this.portfolioHead.classList.remove('activate');
-  this.skillsHead.classList.remove('activate');
-}
+  activateAboutMe = () => {
+    this.aboutMeHead.classList.add('activate');
+    this.portfolioHead.classList.remove('activate');
+    this.skillsHead.classList.remove('activate');
+  }
 
-deactivate = () => {
-  this.portfolioHead.classList.remove('activate');
-  this.skillsHead.classList.remove('activate');
-  this.aboutMeHead.classList.remove('activate');
-}
+  deactivate = () => {
+    this.portfolioHead.classList.remove('activate');
+    this.skillsHead.classList.remove('activate');
+    this.aboutMeHead.classList.remove('activate');
+  }
+
+  switchMenu() {
+    if (this.menuSwitched) {
+      this.menuSwitched = false;
+    } else {
+      this.menuSwitched = true;
+    }
+    this.dataEvent.emit(this.menuSwitched);
+  }
 }

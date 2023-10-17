@@ -5,6 +5,6 @@
         <a id="skillsHead" href="#mySkillsContainer"><span>Skills</span></a>
         <a id="portfolioHead" href="#portfolioContainer"><span>Portfolio</span></a>
     </div>
-    <img class="mobile-menu" src="./assets/img/mobile_menu.png" alt="">
-    <img style="display: none;" class="mobile-menu" src="./assets/img/mobile_close.png" alt="">
+    <img (click)="switchMenu()" class="mobile-menu" [class.hide]="menuSwitched" src="./assets/img/mobile_menu.png" alt="">
+    <img (click)="switchMenu()" class="mobile-menu" [class.hide]="!menuSwitched" src="./assets/img/mobile_close.png" alt="">
 </div>

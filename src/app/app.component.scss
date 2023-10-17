@@ -27,6 +27,10 @@
     
 }
 
+.mobile-menu {
+    display: none;
+}
+
 @media (max-width: 1340px) {
     .scroll-down-container {
         right: 45px;
@@ -35,6 +39,23 @@
 
 @media (max-width: 960px) {
     .scroll-down-container {
+        display: none;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        max-width: 100%;
+        z-index: 99;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .hide {
         display: none;
     }
 }
