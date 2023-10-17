@@ -179,3 +179,28 @@
         right: 75px;
     }
 }
+
+@media (max-width:960px) {
+    .info-container {
+        flex-direction: column;
+    }
+
+    .left-container {
+        width: 100%;
+
+        div {
+            font-size: 20px;
+        }
+    }
+
+    .got-a-problem {
+        font-size: 32px !important;
+        font-weight: 700;
+    }
+
+    .right-container {
+        margin-left: 0;
+        padding-top: 50px;
+        width: 100%;
+    }
+}

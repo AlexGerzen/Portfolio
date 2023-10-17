@@ -40,4 +40,29 @@ a {
     .email {
         font-size: 20px;
     }
+
+    .purple-line {
+        width: 40px;
+    }
+}
+
+@media (max-width: 960px) {
+    .email {
+        display: none;
+    }
+
+    .purple-line {
+        position: absolute;
+        left: 0;
+        width: 100px;
+    }
+
+    .links-container {
+        justify-content: center;
+        gap: 0;
+    }
+    
+    .mobile-margin-l-60 {
+        margin-left: 60px;
+    }
 }

@@ -43,3 +43,9 @@
     width: 100%;
     text-align: center;
 }
+
+@media (max-width:960px) {
+    .portfolio-container {
+        padding-top: 50px;
+    }
+}

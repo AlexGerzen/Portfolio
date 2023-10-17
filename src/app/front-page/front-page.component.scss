@@ -7,18 +7,18 @@
     align-items: center;
     justify-content: space-between;
 
-    clip-path: ellipse(72% 60% at 34% 37%);
+    clip-path: ellipse(72% 55% at 34% 37%);
 
-    
+
 }
 
 .profile-picture-container {
     position: relative;
-    
+
 
     img {
         width: 550px;
-        
+
     }
 }
 
@@ -32,7 +32,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1  !important;
+    z-index: 1 !important;
 }
 
 .headline-button-container {
@@ -60,7 +60,7 @@
 
 .headline-container {
     display: flex;
-   
+
     cursor: default;
 
     div {
@@ -86,22 +86,22 @@
 
 .frontend-developer {
     color: #9747FF;
-    font-size:35px;
+    font-size: 35px;
     padding-top: 35px;
     width: 400px;
     text-align: end;
 }
 
-@media (max-width: 1340px) {
+@media (max-width: 1341px) {
     .front-page-container {
-        clip-path: ellipse(74% 56% at 34% 37%);
+        clip-path: ellipse(74% 51% at 34% 37%);
     }
 
     .profile-picture {
         margin-left: 10px;
     }
 
-    .profile-picture-container {    
+    .profile-picture-container {
         img {
             width: 500px;
         }
@@ -127,4 +127,54 @@
         padding-top: 28px;
     }
 
+}
+
+@media (max-width: 960px) {
+    .front-page-container {
+        flex-direction: column;
+        clip-path: none;
+        background-color: #1e283d;
+    }
+
+    .profile-picture-container {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        clip-path: ellipse(74% 61% at 34% 37%);
+
+        img {
+            width: 450px;
+        }
+    }
+
+    .shadow {
+        width: 100% !important;
+    }
+
+    .profile-picture {
+        margin-left: 0;
+    }
+
+    .headline-button-container {
+        width: 100%;
+        margin: 0;
+
+        button {
+            font-size: 22px;
+        }
+    }
+
+    .alexander-gerzen {
+        font-size: 54px;
+    }
+
+    .frontend-developer {
+        font-size: 40px;
+        padding-top: 24px;
+    }
+
+    .i-am {
+        font-size: 42px;
+    }
 }

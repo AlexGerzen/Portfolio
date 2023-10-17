@@ -50,6 +50,10 @@ a {
     text-underline-offset: 8px;
 }
 
+.mobile-menu {
+    display: none;
+}
+
 @media (max-width: 1340px) {
     .name-container {
         margin-left: 75px;
@@ -57,5 +61,17 @@ a {
 
     .links-container {
         margin-right: 75px;
+    }
+}
+
+@media (max-width:960px) {
+    .links-container {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: flex;
+        margin-right: 75px;
+        cursor: pointer;
     }
 }

@@ -65,6 +65,10 @@ a {
     }
 }
 
+.hide {
+    display: none;
+}
+
 @media (max-width:1340px) {
     .footer-container {
         margin-left: 75px;
@@ -72,4 +76,31 @@ a {
         width: calc(100% - 150px);
     }
 
+}
+
+@media (max-width: 960px) {
+    .hide-mobile {
+        display: none;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .links {
+        gap: 60px;
+    }
+
+    .impressum {
+        font-size: 20px;
+    }
+
+    .hide {
+        display: flex;
+    }
+
+    .alex {
+        margin-bottom: 50px;
+    }
 }

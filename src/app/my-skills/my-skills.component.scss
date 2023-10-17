@@ -99,6 +99,10 @@
     transform: rotate(90deg);
 }
 
+.mobile-button {
+    display: none;
+}
+
 @media (max-width:1340px) {
     .my-skills-container {
         margin-left: 75px;
@@ -109,6 +113,7 @@
         div {
             margin-right: 100px;
             width: calc(25% - 100px);
+            align-items: flex-start;
         }
     }
 
@@ -133,5 +138,63 @@
 
     .my-skills-text {
         margin-right: 75px;
+    }
+}
+
+@media (max-width:960px) {
+    .my-skills-container {
+        padding-top: 50px;
+        flex-direction: column-reverse;
+    }
+
+    .right-container {
+        width: 100%;
+        z-index: 5;
+    }
+
+    .my-skills-text {
+        font-size: 18px;
+    }
+
+    .left-container {
+        width: 100%;
+        div {
+            margin-right: 75px;
+            width: calc(33.3% - 75px);
+            align-items: center;
+        }
+    }
+
+    .hide-mobile {
+        display: none !important;
+    }
+
+    .mobile-button {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-top: 50px;
+        margin-right: 75px;
+        a {
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+        }
+        button {
+            display: flex;
+            background-color: #70E61C;
+            color: white;
+            font-size: 18px;
+            height: 60px;
+            width: 150px;
+            transition: transform 0.3s ease !important;
+
+
+            &:hover {
+                transform: scale(1.2);
+                background-color: #9747FF;
+            }
+        }
+
     }
 }
