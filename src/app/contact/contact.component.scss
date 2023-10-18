@@ -146,7 +146,10 @@
     border-color: red !important;
 }
 
-#messageEmpty, #emailRequired, #nameRequired, #acceptPolicy {
+#messageEmpty,
+#emailRequired,
+#nameRequired,
+#acceptPolicy {
     color: #1e283d;
     width: 100%;
 }
@@ -202,5 +205,38 @@
         margin-left: 0;
         padding-top: 50px;
         width: 100%;
+    }
+}
+
+@media (max-width: 620px) {
+    .head {
+        gap: 20px;
+
+        span {
+            font-size: 36px;
+        }
+    }
+
+    .got-a-problem {
+        font-size: 18px !important;
+    }
+
+    .info-container {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .left-container {
+        div {
+            font-size: 13px;
+        }
+    }
+
+    .purple-shadow {
+        height: 360px;
+    }
+
+    .scroll-up {
+        right: 10px;
     }
 }

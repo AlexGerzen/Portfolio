@@ -59,3 +59,15 @@
         display: none;
     }
 }
+
+@media (max-width: 620px) {
+    .start-page {
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 960px) and (max-height: 600px) {
+    .scroll-down-container {
+        display: none;
+    }
+}

@@ -198,3 +198,31 @@
 
     }
 }
+
+@media (max-width:620px) {
+    .my-skills-container {
+        margin-left: 10px;
+        width: calc(100% - 10px);
+    }
+
+    .my-skills-text {
+        margin-right: 10px;
+    }
+
+    .left-container {
+        div {
+            margin-right: 10px;
+            width:calc(33.3% - 10px);
+        }
+    }
+
+    .mobile-button {
+        margin-right: 0;
+    }
+
+    .right-container {
+        span {
+            font-size: 36px;
+        }
+    }
+}

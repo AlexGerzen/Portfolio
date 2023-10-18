@@ -155,3 +155,35 @@
 
     
 }
+
+@media (max-width:620px) {
+    .project-container {
+        padding-top: 0px;
+        margin-left: 10px;
+        margin-right: 10px;
+        width: calc(100% - 20px);
+
+        img {
+            width: 280px;
+            height: auto;
+        }
+    }
+
+    .purple-shadow {
+        display: none;
+    }
+
+    .live-test, .github {
+        font-size: 15px;
+    }
+
+    .right-container {
+        span {
+            font-size: 34px;
+        }
+    }
+
+    .margin-r-40 {
+        margin-right: 0 !important;
+    }
+}

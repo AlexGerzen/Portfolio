@@ -101,3 +101,17 @@
     }
     
 }
+
+@media (max-width:620px) {
+    .about-me-container {
+        margin-left: 10px;
+        width: calc(100% - 10px);
+    }
+
+    .left-container {
+        margin-right: 10px;
+        span {
+            font-size: 36px;
+        }
+    }
+}

@@ -79,3 +79,14 @@ a {
         cursor: pointer;
     }
 }
+
+@media (max-width:620px) {
+    .name-container {
+        margin-left: 10px;
+        font-size: 32px;
+    }
+
+    .mobile-menu {
+        margin-right: 10px;
+    }
+}

@@ -104,3 +104,19 @@ a {
         margin-bottom: 50px;
     }
 }
+
+@media (max-width:620px) {
+    .alex {
+        font-size: 36px;
+    }
+
+    .footer-container {
+        margin-left: 10px;
+        margin-right: 10px;
+        width: calc(100% - 20px);
+    }
+
+    .copyright {
+        font-size: 20px;
+    }
+}
