@@ -90,3 +90,13 @@ a {
         margin-right: 10px;
     }
 }
+
+@media (min-width: 1700px) {
+    .name-container {
+        margin-left: 300px;
+    }
+
+    .links-container {
+        margin-right: 300px;
+    }
+}

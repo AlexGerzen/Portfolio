@@ -240,3 +240,22 @@
         right: 10px;
     }
 }
+
+@media (min-width:1700px) {
+    .purple-line {
+        width: 150px;
+    }
+
+    .head {
+        gap: 150px;
+    }
+
+    .info-container {
+        margin-left: 300px;
+        margin-right: 300px;
+    }
+
+    .scroll-up {
+        right: 300px;
+    }
+}

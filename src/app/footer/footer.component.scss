@@ -120,3 +120,11 @@ a {
         font-size: 20px;
     }
 }
+
+@media (min-width:1700px) {
+    .footer-container {
+        margin-right: 300px;
+        margin-left: 300px;
+        width: calc(100% - 600px);
+    }
+}

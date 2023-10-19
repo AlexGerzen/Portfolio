@@ -19,7 +19,7 @@ a {
 }
 
 .purple-line {
-    width: 100px;
+    width: 250px;
     height: 1px;
     border: 3px solid #9747FF;
     border-top-right-radius: 10px;
@@ -70,5 +70,11 @@ a {
 @media (max-width:620px) {
     .purple-line {
         display: none;
+    }
+}
+
+@media (min-width: 1700px) {
+    .purple-line {
+        width: 300px;
     }
 }

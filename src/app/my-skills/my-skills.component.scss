@@ -58,7 +58,7 @@
 
     span {
         font-weight: 700;
-        font-size: 60px;
+        font-size: 62px;
     }
 
     button {
@@ -223,6 +223,27 @@
     .right-container {
         span {
             font-size: 36px;
+        }
+    }
+}
+
+@media (min-width: 1700px) {
+    .my-skills-container {
+        margin-left: 300px;
+        width: calc(100% - 300px);
+    }
+
+    .purple-line {
+        width: 200px;
+    }
+
+    .my-skills-text {
+        margin-right: 300px;
+    }
+
+    .right-container {
+        button {
+            margin-right: 350px;
         }
     }
 }

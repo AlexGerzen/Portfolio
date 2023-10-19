@@ -187,3 +187,11 @@
         margin-right: 0 !important;
     }
 }
+
+@media (min-width: 1700px) {
+    .project-container {
+        margin-left: 300px;
+        margin-right: 300px;
+        width: calc(100% - 600px);
+    }
+}

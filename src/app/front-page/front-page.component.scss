@@ -31,7 +31,7 @@
 .shadow {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 85px;
     z-index: 1 !important;
 }
 
@@ -95,6 +95,10 @@
 @media (max-width: 1341px) {
     .front-page-container {
         clip-path: ellipse(74% 51% at 36% 37%);
+    }
+
+    .shadow {
+        left: 0;
     }
 
     .profile-picture {
@@ -226,5 +230,44 @@
 @media screen and (min-width: 620px) and (max-width: 960px) {
     .front-page-container {
         height: auto;
+    }
+}
+
+@media (min-width:1700px) {
+    .profile-picture-container {
+        img {
+            width: 650px;
+        }
+    }
+
+    .shadow {
+        left: 200px;
+    }
+
+    .profile-picture {
+        margin-left: 239px;
+    }
+
+    .headline-button-container {
+        margin-right: 300px;
+    }
+
+
+    
+}
+
+@media (min-width:1770px) {
+    .alexander-gerzen {
+        width: 500px;
+        font-size: 62px;
+    }
+
+    .frontend-developer {
+        width: 500px;
+        font-size: 45px;
+    }
+
+    .i-am {
+        font-size: 50px;
     }
 }
