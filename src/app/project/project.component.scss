@@ -17,6 +17,38 @@
     z-index: 5;
 }
 
+.slide-in-left {
+    animation: aboutMeLeftAnimation 0.8s ease 0s 1 normal forwards;
+}
+
+@keyframes aboutMeLeftAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-1000px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-right {
+    animation: aboutMeRightAnimation 0.8s ease 0s 1 normal forwards;
+}
+
+@keyframes aboutMeRightAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(1000px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .other-direction {
     flex-direction: row-reverse;
 }
@@ -155,6 +187,7 @@
 
     
 }
+
 
 @media (max-width:620px) {
     .project-container {

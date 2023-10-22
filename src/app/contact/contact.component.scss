@@ -11,6 +11,24 @@
     max-width: 100%;
 }
 
+.slide-in-right {
+    animation: inputAnimation 0.8s ease 0s 1 normal forwards;
+}
+
+@keyframes inputAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(1000px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
 .head {
     width: 100%;
     display: flex;
@@ -46,6 +64,22 @@
 
     div {
         font-size: 16px;
+    }
+}
+
+.slide-in-left {
+    animation: aboutMeLeftAnimation 0.8s ease 0s 1 normal forwards;
+}
+
+@keyframes aboutMeLeftAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-1000px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 

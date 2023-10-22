@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { NgForm, FormBuilder } from '@angular/forms';
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 
 
 
@@ -10,44 +11,82 @@ import { NgForm } from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
 
-  inputName = {
+  name = {
     value: null,
     empty: false
   };
-  inputEmail = {
+  email = {
     value: null,
     empty: false
   };
-  inputMessage = {
+  message = {
     value: null,
     empty: false
   };
-
   checkboxMarked: boolean = true;
 
-  constructor() { }
+
+
+
+  constructor(private httpClient: HttpClient) {
+
+  }
 
   ngOnInit(): void {
     this.checkboxMarked = false;
+    this.startInputAnimation();
+    this.startContactMeAnimation();
+    
+  }
+
+  startContactMeAnimation() {
+    let element = document.querySelector('.contact-container');
+
+    let observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          document.getElementById('leftContainerContact').classList.add('slide-in-left');
+          observer.unobserve(element);
+        }
+      });
+    });
+
+    observer.observe(element);
+  }
+
+  startInputAnimation() {
+    let element = document.querySelector('.contact-container');
+
+    let observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          document.getElementById('myFormContainer').classList.add('slide-in-right');
+          observer.unobserve(element);
+        }
+      });
+    });
+
+    observer.observe(element);
   }
 
   sendEmail(myForm: NgForm) {
-    console.log(myForm.controls['nameInput'])
-    if(!this.checkInput(myForm.controls['nameInput'].valid, this.inputName)) {
+    console.log(myForm.controls['name']) ///////////////////////////////////////////////////Entfernen
+    if (!this.checkInput(myForm.controls['name'].valid, this.name)) {
       return
-    }
-    if (!this.checkInput(myForm.controls['emailInput'].valid, this.inputEmail)) {
+    } else if (!this.checkInput(myForm.controls['email'].valid, this.email)) {
       return
-    }
-    if (!this.checkInput(myForm.controls['messageInput'].valid, this.inputMessage)) {
+    } else if (!this.checkInput(myForm.controls['message'].valid, this.message)) {
       return
-    }
-    if (!this.acceptPolicy()) {
+    } else if (!this.acceptPolicy()) {
       return
+    } else {
+      this.sendMail(this.name.value, this.email.value, this.message.value)
+      myForm.reset();
     }
   }
 
-  checkInput(nameValid: boolean, input : any) {
+
+  checkInput(nameValid: boolean, input: any) {
     if (!nameValid) {
       input.empty = true;
       return false;
@@ -56,6 +95,33 @@ export class ContactComponent implements OnInit {
       return true;
     }
   }
+
+  sendMail(name: String, email: String, message: String) {
+
+    let url = "https://formspree.io/f/xrgwjzwp"
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        Accept: "application/json",
+        "Content-Type": "application/x-www-form-urlencoded"
+      })
+    };
+
+    let data = `name=${name}&email=${email}&message=${message}`;
+    let errorMessage: string = "";
+
+    this.httpClient.post<any>(url, data, httpOptions).subscribe({
+      next: data => {
+        console.log("email sent" + JSON.stringify(data));
+      },
+      error: error => {
+        errorMessage = error.message;
+        console.log('error!', errorMessage);
+      }
+    })
+
+  }
+
 
   acceptPolicy() {
     if (!this.checkboxMarked) {
