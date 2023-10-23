@@ -139,7 +139,19 @@
     }
 
     button {
+        background-color: #70E61C;
+        color: white;
+        margin-top: 50px;
+        font-size: 18px;
+        height: 60px;
         width: 200px;
+        transition: transform 0.3s ease !important;
+
+
+        &:hover {
+            transform: scale(1.2);
+            background-color: #9747FF;
+        }
     }
 }
 
