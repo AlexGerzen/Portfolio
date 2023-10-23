@@ -1,0 +1,16 @@
+.policy-container {
+    background-color: #1e283d;
+    overflow-y: scroll;
+    position: relative;
+    padding-top: 100px;
+
+    img {
+        position: absolute;
+        top: 110px;
+        right: 20px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

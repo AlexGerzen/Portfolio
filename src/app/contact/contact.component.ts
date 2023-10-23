@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { NgForm, FormBuilder } from '@angular/forms';
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 
@@ -24,6 +24,8 @@ export class ContactComponent implements OnInit {
     empty: false
   };
   checkboxMarked: boolean = true;
+
+  @Output() showPolicy = new EventEmitter<boolean>();
 
 
 
@@ -122,6 +124,9 @@ export class ContactComponent implements OnInit {
 
   }
 
+  public openPrivacyPolicy() {
+    this.showPolicy.emit(true);
+  }
 
   acceptPolicy() {
     if (!this.checkboxMarked) {

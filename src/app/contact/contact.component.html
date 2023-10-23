@@ -16,7 +16,7 @@
             <div [class.color-red]="email.empty" id="emailRequired">Your email is required</div>
             <textarea [class.border-red]="message.empty" id="yourMessage" [(ngModel)]="message.value" required name="message" placeholder="Your message" cols="30" rows="10"></textarea>
             <div [class.color-red]="message.empty" id="messageEmpty">Your message is empty</div>
-            <div class="checkbox-container"><mat-checkbox (click)="setPolicy()" color="primary"></mat-checkbox>I´ve read the privacy policy and agree to the processing of my data as outlined.</div>
+            <div class="checkbox-container"><mat-checkbox (click)="setPolicy()" color="primary"></mat-checkbox><div>I've read the <a (click)="openPrivacyPolicy()">privacy policy</a> and agree to the processing of my data as outlined.</div></div>
             <div id="acceptPolicy">Please accept the privacy policy</div>
             <button value="Submit" type="submit"  mat-raised-button>Send message :)</button>
         </form>

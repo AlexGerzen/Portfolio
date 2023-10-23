@@ -10,9 +10,10 @@
         <app-my-skills></app-my-skills>
         <app-portfolio></app-portfolio>
         <app-project></app-project>
-        <app-contact></app-contact>
+        <app-contact (showPolicy)="receiveDataFromContact($event)"></app-contact>
         <app-footer></app-footer>
     </div>
     <app-mobile-menu (menuClosed)="receiveDataFromMobileMenu($event)" [class.hide]="!showMenu"
         class="mobile-menu"></app-mobile-menu>
+    <app-privacy-policy (policyClosed)="receiveDataFromPolicy($event)" class="privacy-policy" [class.showPolicy]="showPolicy" ></app-privacy-policy>
 </div>

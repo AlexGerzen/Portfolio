@@ -18,6 +18,8 @@ import { FooterComponent } from './footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { ImpressumComponent } from './impressum/impressum.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { HttpClientModule } from '@angular/common/http';
     ProjectComponent,
     ContactComponent,
     FooterComponent,
-    MobileMenuComponent
+    MobileMenuComponent,
+    PrivacyPolicyComponent,
+    ImpressumComponent
   ],
   imports: [
     BrowserModule,

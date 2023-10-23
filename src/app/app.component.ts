@@ -9,6 +9,7 @@ export class AppComponent {
   title = 'Portfolio';
   public showMenu: boolean = false;
   public boolToHeader: boolean = false;
+  public showPolicy: boolean = false;
 
   receiveDataFromHeader(data: boolean) {
     this.showMenu = data;
@@ -16,9 +17,17 @@ export class AppComponent {
 
   receiveDataFromMobileMenu(data: boolean) {
     this.boolToHeader = data;
-    
+
     setTimeout(() => {
       this.boolToHeader = false;
-    },100)
+    }, 100)
+  }
+
+  receiveDataFromContact(data: boolean) {
+    this.showPolicy = data;
+  }
+
+  receiveDataFromPolicy(data: boolean) {
+    this.showPolicy = data;
   }
 }

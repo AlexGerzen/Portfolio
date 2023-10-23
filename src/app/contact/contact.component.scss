@@ -151,6 +151,17 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    width: 100%;
+
+    a {
+        color: #9747FF;
+        margin: 0;
+
+        &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
 }
 
 .scroll-up {
@@ -207,6 +218,7 @@
             font-size: 14px;
         }
     }
+    
 
     .got-a-problem {
         font-size: 28px !important;
