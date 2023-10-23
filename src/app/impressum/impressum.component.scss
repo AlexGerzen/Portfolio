@@ -1,0 +1,16 @@
+.impressum {
+    background-color: #1e283d;
+    position: relative;
+    padding-top: 100px;
+    overflow: auto;
+
+    img {
+        position: absolute;
+        top: 110px;
+        right: 20px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

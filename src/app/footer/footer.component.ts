@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
+  @Output() impressumOpen = new EventEmitter<boolean>();
 
+  openImpressum() {
+    this.impressumOpen.emit(true);
+  }
 }

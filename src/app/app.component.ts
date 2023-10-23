@@ -10,6 +10,7 @@ export class AppComponent {
   public showMenu: boolean = false;
   public boolToHeader: boolean = false;
   public showPolicy: boolean = false;
+  public showImpressum: boolean = false;
 
   receiveDataFromHeader(data: boolean) {
     this.showMenu = data;
@@ -29,5 +30,13 @@ export class AppComponent {
 
   receiveDataFromPolicy(data: boolean) {
     this.showPolicy = data;
+  }
+
+  receiveDataFromFooter(data: boolean) {
+    this.showImpressum = data;
+  }
+
+  receiveDataFromImpressum(data: boolean) {
+    this.showImpressum = data;
   }
 }

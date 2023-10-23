@@ -28,11 +28,12 @@
 }
 
 .mobile-menu,
-.privacy-policy {
+.privacy-policy,
+.impressum {
     display: none;
 }
 
-.showPolicy {
+.showPolicy, .showImpressum {
     position: fixed;
     display: flex;
     height: 100vh;
