@@ -11,6 +11,10 @@
     max-width: 100%;
 }
 
+.hide {
+    display: none !important;
+}
+
 .slide-in-right {
     animation: inputAnimation 0.8s ease 0s 1 normal forwards;
 }
@@ -211,6 +215,34 @@
     width: 100%;
 }
 
+.email-sent {
+    position: absolute;
+    color: white;
+    top: calc(50% - 25px);
+    left: calc(50% - 100px);
+    border: 0.5px solid black;
+    height: 50px;
+    width: 200px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #1e283d;
+    border-radius: 15px;
+    box-shadow: 0px 1px 2px 0px black;
+    animation: emailSentAni 0.5s ease 0s 1 normal forwards;
+}
+
+@keyframes emailSentAni {
+	0% {
+		opacity: 0;
+		transform: translateY(250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
 @media (max-width:1340px) {
     .purple-line {
         width: 25px;
@@ -230,7 +262,7 @@
             font-size: 14px;
         }
     }
-    
+
 
     .got-a-problem {
         font-size: 28px !important;

@@ -24,6 +24,7 @@ export class ContactComponent implements OnInit {
     empty: false
   };
   checkboxMarked: boolean = true;
+  emailSent: boolean = false;
 
   @Output() showPolicy = new EventEmitter<boolean>();
 
@@ -84,6 +85,11 @@ export class ContactComponent implements OnInit {
     } else {
       this.sendMail(this.name.value, this.email.value, this.message.value)
       myForm.reset();
+      this.emailSent = true;
+
+      setTimeout(() => {
+        this.emailSent = false;
+      },1000)
     }
   }
 
