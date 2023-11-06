@@ -3,6 +3,9 @@
     overflow-y: scroll;
     position: relative;
     padding-top: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
+    color: white;
 
     img {
         position: absolute;
@@ -12,5 +15,26 @@
         &:hover {
             cursor: pointer;
         }
+    }
+}
+
+@media (max-width: 1340px) {
+    .policy-container {
+        padding-left: 75px;
+        padding-right: 75px;
+    }
+}
+
+@media (max-width:620px) {
+    .policy-container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media (min-width: 1700px) {
+    .policy-container {
+        padding-left: 300px;
+        padding-right: 300px;
     }
 }
