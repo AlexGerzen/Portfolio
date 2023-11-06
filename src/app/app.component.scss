@@ -96,3 +96,15 @@
         display: none;
     }
 }
+
+@media (max-height: 720px) {
+    .start-page {
+        height: auto;
+    }
+}
+
+@media (max-height: 660px) {
+    .scroll-down-container {
+        display: none;
+    }
+}
