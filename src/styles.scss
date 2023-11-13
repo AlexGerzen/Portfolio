@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -10,9 +10,44 @@ body {
     max-width: 100%;
     overflow-x: hidden;
 }
-html, body { height: 100%;max-width: 100%;width: 100vw;
- }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html,
+body {
+    height: 100%;
+    max-width: 100%;
+    width: 100vw;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
 html {
     scroll-behavior: smooth;
-  }
+    
+}
+
+// Scrollbar
+
+/* Breite der Scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track der Scrollbar */
+::-webkit-scrollbar-track {
+    background-color: #d1d1d1;
+}
+
+/* Griff der Scrollbar */
+::-webkit-scrollbar-thumb {
+    background-color: #4d4c4c;
+    border-radius: 6px;
+}
+
+/* Äußere Erscheinung bei Hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #353333;
+}
+
