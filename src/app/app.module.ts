@@ -21,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,7 @@ import { ImpressumComponent } from './impressum/impressum.component';
     ImpressumComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, 
     AppRoutingModule,
     NoopAnimationsModule,
     MatButtonModule,

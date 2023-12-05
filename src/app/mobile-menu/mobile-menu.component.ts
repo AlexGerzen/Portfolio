@@ -8,7 +8,24 @@ import { Component, Output, EventEmitter } from '@angular/core';
 export class MobileMenuComponent {
   @Output() menuClosed = new EventEmitter<boolean>();
 
-  closeMenu() {
+  closeMenu(elementId) {
     this.menuClosed.emit(true);
+    this.scrollToElement(elementId);
+  }
+
+  scrollToElement(elementId) {
+    const targetElementId = elementId;
+    const offset = 100;
+  
+    const element = document.getElementById(targetElementId);
+  
+    if (element) {
+      const offsetPosition = element.offsetTop - offset;
+  
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
   }
 }

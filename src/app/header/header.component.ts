@@ -1,6 +1,8 @@
 import { Component, AfterViewInit, Output, EventEmitter ,Input } from '@angular/core';
 
 
+
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -53,6 +55,7 @@ export class HeaderComponent implements AfterViewInit {
       this.deactivate();
     }
   }
+
 
   activatePortfolio = () => {
     this.portfolioHead.classList.add('activate');
