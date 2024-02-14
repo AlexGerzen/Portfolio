@@ -20,6 +20,7 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { ImpressumComponent } from './impressum/impressum.component';
+import { LoadingScreenComponent } from './loading-screen/loading-screen.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { ImpressumComponent } from './impressum/impressum.component';
     FooterComponent,
     MobileMenuComponent,
     PrivacyPolicyComponent,
-    ImpressumComponent
+    ImpressumComponent,
+    LoadingScreenComponent
   ],
   imports: [
     BrowserModule, 

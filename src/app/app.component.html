@@ -1,4 +1,4 @@
-<div class="margin-l-r-400">
+<div *ngIf="!showLoadingScreen" class="margin-l-r-400">
     <div class="start-page">
         <app-header [dataFromApp]="boolToHeader" (dataEvent)="receiveDataFromHeader($event)"></app-header>
         <app-front-page></app-front-page>
@@ -18,3 +18,4 @@
     <app-privacy-policy (policyClosed)="receiveDataFromPolicy($event)" class="privacy-policy" [class.showPolicy]="showPolicy" ></app-privacy-policy>
     <app-impressum (impressumClose)="receiveDataFromImpressum($event)" class="impressum" [class.showImpressum]="showImpressum"></app-impressum>
 </div>
+<app-loading-screen *ngIf="showLoadingScreen"></app-loading-screen>
