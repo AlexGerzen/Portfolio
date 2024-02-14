@@ -33,9 +33,9 @@ export class HeaderComponent implements AfterViewInit {
     this.aboutMeHead = document.getElementById('aboutMeHead');
     this.skillsHead = document.getElementById('skillsHead');
 
-    this.portfolioContainer = document.getElementById('portfolioContainer');
-    this.aboutMeContainer = document.getElementById('aboutMeContainer');
-    this.mySkillsContainer = document.getElementById('mySkillsContainer');
+    this.portfolioContainer = document.getElementById('Portfolio');
+    this.aboutMeContainer = document.getElementById('AboutMe');
+    this.mySkillsContainer = document.getElementById('MySkills');
 
     window.addEventListener("scroll", () => this.addClass());
   }
